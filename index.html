@@ -81,7 +81,18 @@
     <div class="brand">BALLAS<span> STREET</span></div>
     <p>FIVE V ROLEPLAY • SOUTHSIDE BALLAS</p>
     <a href="https://discord.gg/southsideballas" target="_blank">discord.gg/southsideballas</a>
-  </footer>
+  </footer><audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const music = document.getElementById("bgMusic");
+
+document.addEventListener("click", function startMusic() {
+  music.play().catch(() => {});
+  document.removeEventListener("click", startMusic);
+});
+</script>
   <script src="script.js"></script>
 </body>
 </html>
