@@ -8,6 +8,112 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="loading-screen">
+  <div class="loader-content">
+    <div class="loader-logo">B</div>
+
+    <h1>BALLAS STREET</h1>
+    <p>WELCOME TO THE STREET</p>
+
+    <div class="loading-bar">
+      <div class="loading-progress"></div>
+    </div>
+
+    <span>LOADING...</span>
+  </div>
+</div>
+
+<style>
+#loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: #050008;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: opacity .8s ease, visibility .8s ease;
+}
+
+#loading-screen.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-content {
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.loader-logo {
+  width: 130px;
+  height: 130px;
+  margin: auto;
+  border: 4px solid #b000ff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 95px;
+  font-weight: 900;
+  color: #d000ff;
+  text-shadow: 0 0 10px #d000ff, 0 0 30px #9d00ff;
+  box-shadow: 0 0 20px #b000ff, 0 0 50px #7a00ff;
+  animation: spinB 2s linear infinite;
+}
+
+.loader-content h1 {
+  margin: 25px 0 5px;
+  letter-spacing: 6px;
+  font-size: 30px;
+}
+
+.loader-content p {
+  margin-bottom: 25px;
+  letter-spacing: 3px;
+  opacity: .7;
+}
+
+.loading-bar {
+  width: 240px;
+  height: 5px;
+  margin: auto;
+  background: #24152d;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.loading-progress {
+  width: 0;
+  height: 100%;
+  background: #c000ff;
+  box-shadow: 0 0 15px #c000ff;
+  animation: loading 2.3s ease forwards;
+}
+
+.loader-content span {
+  display: block;
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+@keyframes spinB {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+
+@keyframes loading {
+  from { width: 0; }
+  to { width: 100%; }
+}
+</style>
+
+<script>
+setTimeout(() => {
+  document.getElementById("loading-screen").classList.add("hide");
+}, 2500);
+</script>
   <div class="noise"></div>
 
   <header class="nav">
