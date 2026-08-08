@@ -29,11 +29,9 @@ h1 span,h2 span{color:var(--pink)}
 footer{padding:45px 9%;border-top:1px solid #ffffff10;display:flex;align-items:center;justify-content:space-between;gap:20px}footer p,footer a{font-size:10px;letter-spacing:2px;color:#888}footer a:hover{color:var(--pink)}
 @media(max-width:800px){nav{display:none}.nav{height:64px}.nav-btn{padding:10px 14px}.hero{min-height:620px}.hero-bg{object-position:60% center}.hero-content{margin:0 7%}.hero-overlay{background:linear-gradient(90deg,#07030adf,#07030a66),linear-gradient(0deg,#07030aff 0%,transparent 45%)}.tagline{letter-spacing:2px}.two-col{grid-template-columns:1fr;gap:30px}.cards{grid-template-columns:1fr}.section{padding:80px 7%}.recruit-box{padding:40px 25px}footer{flex-direction:column;align-items:flex-start}}
 body {
-    background-image:
-        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-        url("background.png");
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  background-image: url("background.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
